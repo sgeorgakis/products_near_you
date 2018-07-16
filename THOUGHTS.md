@@ -7,10 +7,10 @@ Filtering the products to match the request's arguments would take place in the 
 making the request handling faster.
 A database would also allow the application to handle much bigger size of data.
 Moreover, the application could always use a caching layer to hold some of (if not all)
-the data in memory and increase throughtput.
+the data in memory and increase speed.
 The main problem with this approach is to determine when to update the cache.
 This has to do with the way the data are updated.
-If for example, they are updated in a fixed interval, then the cache can be invalidated in the same one.
+If for example, they are updated in a fixed interval, then the cache can be invalidated in the same interval.
 If the app is also responsible for updating the data (through a different endpoint),
 then updated data should be invalidated while updating the database.
 

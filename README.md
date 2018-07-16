@@ -84,7 +84,7 @@ First, the data are loaded from the csv files in a suitable data structure.
 After that, the application is ready to handle requests.
 **CORS is enabled for all origins.**
 
-The request should use the `GET` HTTP method as pass all the arguments as query parameters.
+The request should use the `GET` HTTP method and pass all the arguments as query parameters.
 A valid request url has the following format:
 
 `/search?count=10&radius=500&lat=59.33258&lng=18.0649&tags=home,shirts`
@@ -97,7 +97,7 @@ The `lat` parameter is the latitude of the user's position and must be a float.
 
 The `lng` parameter is the longitute of the user's position and must be a float.
 
-The `tags` parameter are the tags that the shop must have at least one and is a string
+The `tags` (optional) parameter are the tags that the shop must have at least one and is a string
 with values separated by commas.
 
 If any of the above parameters is invalid, a `Bad Request` response is returned,
@@ -112,7 +112,7 @@ Known Issues
 ------------
 
 In the front end app, according to jQuery's documentation and various resources,
-the response message should be found in response object's `responseJSON` attribute.
+the response message in case of an error should be found in response object's `responseJSON` attribute.
 While testing this functionality, the `responseJSON` attribute was always null,
 although the response from the server was the expected one.
 This does not allow the user to be presented the error message returned.
